@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Melody - A Music Recommendation System</h1>
+    <form method="POST">{% csrf_token %}
+        <h2>Age: </h2>
+        <input type=number name="age" placeholder="Enter age"> 
+        <h2>Mood: </h2>
+        <input type=text name="mood" placeholder="Enter mood">
+        <h2>Time: </h2>
+        <input type=text name="time" placeholder="Enter time">
+        <h2>Activity: </h2>
+        <input type=text name="activity" placeholder="Enter activity">
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+    {% if result != 'None' %}
+    <h2> result :{{result}}</h2>
+    {% endif %}
+</body>
+</html>
